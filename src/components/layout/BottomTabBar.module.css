@@ -1,0 +1,122 @@
+/* BottomTabBar styles */
+.tabBarContainer {
+  position: fixed;
+  width: 378px;
+  height: 72px;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+  z-index: 50;
+  will-change: transform;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+.tabBarContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 4px;
+  position: absolute;
+  height: 72px;
+  left: 0;
+  right: 0;
+  top: 0;
+  background: rgba(0, 12, 38, 0.8);
+  box-shadow: 0px 24px 68px rgba(0, 151, 234, 0.68), 0px 4px 68px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(12px);
+  border-radius: 8px;
+}
+
+.navLink {
+  text-decoration: none;
+}
+
+.tabItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  width: 62px;
+  height: 64px;
+  background: transparent;
+  border: none;
+  border-radius: 12px;
+  backdrop-filter: none;
+  flex: none;
+  cursor: pointer;
+  padding: 0px;
+  position: relative;
+  z-index: 2;
+}
+
+.tabItemActive {
+  padding: 12px 14px;
+  border-radius: 12px;
+}
+
+.tabIcon {
+  width: 24px;
+  height: 24px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.tabIconImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+.tabLabel {
+  font-style: normal;
+  font-weight: 590;
+  font-size: 10px;
+  line-height: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  letter-spacing: 0.06px;
+  color: rgba(255, 255, 255, 0.95);
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.highlight {
+  position: absolute;
+  width: 56px;
+  height: 9px;
+  left: 131px; /* Центр Cases кнопки: 4px + 62px + 62px + 31px - 28px = 131px */
+  top: 59px;
+  flex: none;
+  order: 6;
+  flex-grow: 0;
+  z-index: 6;
+}
+
+.highlightImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Скользящий индикатор для активного таба */
+.slidingIndicator {
+  position: absolute;
+  top: 4px;
+  left: 0;
+  height: 64px;
+  width: 62px;
+  background: rgba(41, 144, 255, 0.2);
+  border: 1px solid #2990FF;
+  border-radius: 4px;
+  backdrop-filter: blur(12px);
+  transition: transform 0.3s ease-in-out;
+  z-index: 1;
+}

@@ -1,0 +1,133 @@
+/* UpgradeWheel styles */
+.wheelContainer {
+  position: relative;
+  width: 308px;
+  height: 308px;
+  margin: 0 auto;
+}
+
+/* Анимация вращения для внешних колец */
+.rotatingRing {
+  animation: rotate 8s linear infinite;
+}
+
+.rotatingRingReverse {
+  animation: rotateReverse 6s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateReverse {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+/* Сохраняем старые стили для совместимости */
+.circle {
+  transition: stroke 0.4s;
+}
+
+.successColor {
+  transition: stroke 0.4s, fill 0.4s, filter 0.4s;
+}
+
+.upgradeContainer {
+  max-width: 375px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.chanceText {
+  text-shadow: 0 1px 8px #0008;
+}
+
+.coefButton {
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.coefButtonSelected {
+  opacity: 1;
+}
+
+.dynamicOpacity {
+  transition: opacity 0.2s;
+}
+
+.textShadowTransition {
+  text-shadow: 0 0 8px #23242a;
+  transition: fill 0.4s, text-shadow 0.4s;
+}
+
+/* Стили для центрального содержимого колеса */
+.wheelCenterContent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wheelCaseImageContainer {
+  width: 126px;
+  height: 126px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.wheelCaseImage {
+  width: 110px;
+  height: 110px;
+  object-fit: contain;
+}
+
+.wheelChanceText {
+  color: white;
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.wheelChanceTextWithImage {
+  font-size: 24px;
+}
+
+.wheelChanceTextDefault {
+  font-size: 28px;
+}
+
+/* Стили для SVG слоев колеса */
+.wheelSvgLayer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 308px;
+  height: 308px;
+}
+
+.wheelSvgLayerOpacity {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 308px;
+  height: 308px;
+  opacity: 0;
+}

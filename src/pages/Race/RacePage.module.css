@@ -1,0 +1,554 @@
+/* Container */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+/* Content */
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  gap: 24px;
+  order: 3;
+  flex-grow: 0;
+}
+
+/* Notification */
+.notification {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 6px 10px 8px;
+  gap: 10px;
+  width: 309px;
+  height: 30px;
+  background: rgba(241, 46, 46, 0.15);
+  border: 1px solid rgba(241, 46, 46, 0.15);
+  border-radius: 4px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.notificationFrame {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 10px;
+  width: 289px;
+  height: 16px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.notificationLabel {
+  width: 289px;
+  height: 16px;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: -0.08px;
+  color: #e53935;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+/* Timer */
+.timer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 10px;
+  width: 350px;
+  height: 117px;
+  border-radius: 4px;
+  transform: matrix(1, 0, 0, -1, 0, 0);
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.timerContainer {
+  position: relative;
+  height: 117px;
+  transform: matrix(1, 0, 0, -1, 0, 0);
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.timerBg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  height: 117px;
+  left: 0px;
+  top: 0px;
+  background: #32417a;
+  border-radius: 12px;
+}
+
+.timerLabel {
+  margin-bottom: 17px;
+  font-size: 15px;
+  line-height: 20px;
+  color: #ffffff;
+}
+
+.timerTitle {
+  font-size: 39px;
+  line-height: 24px;
+  font-weight: 590;
+  color: #ffffff;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 16px;
+  width: 350px;
+  height: 42px;
+  flex: none;
+  order: 2;
+  flex-grow: 0;
+}
+
+.buttonSecondary {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  min-width: 42px;
+  height: 42px;
+  background: rgba(41, 144, 255, 0.2);
+  border: 1px solid #2990ff;
+  border-radius: 4px;
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+  cursor: pointer;
+}
+
+.buttonPrimary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 14px;
+  gap: 8px;
+  width: 167px;
+  min-width: 42px;
+  height: 42px;
+  background: #2990ff;
+  border-radius: 4px;
+  border: none;
+  flex: none;
+  order: 1;
+  flex-grow: 1;
+  cursor: pointer;
+}
+
+.buttonLabel {
+  height: 20px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: -0.23px;
+  color: #ffffff;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+/* Race Content */
+.raceContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  gap: 8px;
+  flex: none;
+  order: 3;
+  flex-grow: 0;
+}
+
+/* Card */
+.card {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  gap: 4px;
+  isolation: isolate;
+  width: 350px;
+  height: 60px;
+  background: #1a2242;
+  backdrop-filter: blur(3px);
+  border-radius: 12px;
+  flex: none;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.cardTitle {
+  width: 22px;
+  height: 16px;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  letter-spacing: -0.08px;
+  color: #aaaaaa;
+  text-shadow: 0px 4px 16px rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(12px);
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  z-index: 0;
+}
+
+.cardAccent {
+  width: 6px;
+  height: 44px;
+  left: 1px;
+  top: calc(50% - 44px / 2);
+  background: linear-gradient(
+      180deg,
+      #3fd1de 0%,
+      #2096d6 10.58%,
+      #1d87bb 25%,
+      #0ca299 50%,
+      #03e4ab 100%
+    ),
+    #007aff;
+  border-radius: 3px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  z-index: 1;
+}
+
+/* Avatar */
+.cardAvatar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatarTitle {
+  width: 152px;
+}
+
+.avatarName {
+  font-weight: 590;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: -0.23px;
+  text-shadow: 0px 4px 16px rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(12px);
+}
+
+/* Balance */
+.cardBalance {
+  padding: 4px 4px 4px 8px;
+}
+
+.balanceTitle {
+  font-weight: 590;
+  font-size: 16px;
+  line-height: 21px;
+  letter-spacing: -0.23px;
+  text-shadow: 0px 4px 16px rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(12px);
+}
+
+/* Giveaway */
+.giveaway {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  max-width: 390px;
+  flex: none;
+  order: 4;
+  flex-grow: 0;
+}
+
+.giveawayTitle {
+  width: 200px;
+  font-weight: 590;
+  font-size: 20px;
+  line-height: 25px;
+  text-align: center;
+  letter-spacing: -0.45px;
+  color: #ffffff;
+}
+
+.giveawayContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 390px;
+  border-radius: 4px;
+}
+
+.giveawayContent {
+  width: 100%;
+  background: #1a2242;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px 24px;
+}
+
+.giveawayButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 42px;
+  margin-top: 24px;
+  margin-bottom: 16px;
+  background: #2990ff;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+}
+
+.giveawayButtonLabel {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1;
+  letter-spacing: -0.23px;
+  color: #ffffff;
+}
+
+/* Packs Row */
+.packsRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  width: 100%;
+  margin-bottom: auto;
+}
+
+/* Pack Card */
+.packCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 169px;
+  height: 223px;
+  align-items: center;
+  padding: 5px 16px 12px;
+  gap: 24px;
+  background: #32417a;
+  border-radius: 8px;
+}
+
+.packImageContainer {
+  width: 100%;
+  min-height: 158px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.packImage {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Pack Visual Effects */
+.packStars {
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  right: -10%;
+  bottom: -10%;
+  background: linear-gradient(
+    45deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.1) 50%,
+    transparent 70%
+  );
+  opacity: 0.5;
+  transform: rotate(45deg);
+  animation: shimmer 3s infinite;
+}
+
+.packGlow1 {
+  position: absolute;
+  top: 30%;
+  left: -10%;
+  right: 5%;
+  bottom: -2%;
+  background: #26e4d0;
+  opacity: 0.4;
+  filter: blur(52px);
+  border-radius: 50%;
+}
+
+.packGlow2 {
+  position: absolute;
+  top: 15%;
+  left: 5%;
+  right: 19%;
+  bottom: 8%;
+  background: #9365ff;
+  opacity: 0.6;
+  filter: blur(20px);
+  border-radius: 50%;
+  visibility: hidden;
+}
+
+.packElements {
+  position: absolute;
+  top: 19%;
+  left: 11%;
+  right: 19%;
+  bottom: 20%;
+  filter: drop-shadow(0px 5px 29px rgba(0, 0, 0, 0.75));
+  background: linear-gradient(45deg, #00bbab, #3fd1de);
+  border-radius: 4px;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%) rotate(45deg);
+  }
+  100% {
+    transform: translateX(100%) rotate(45deg);
+  }
+}
+
+.packInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  width: 100%;
+}
+
+.packName {
+  font-weight: 590;
+  font-size: 17px;
+  line-height: 22px;
+  text-align: center;
+  letter-spacing: -0.4px;
+  color: #ffffff;
+}
+
+.packPriceLayout {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.packPriceText {
+  font-weight: 590;
+  font-size: 17px;
+  line-height: 22px;
+  letter-spacing: -0.4px;
+  color: #ffffff;
+  text-shadow: 0px 4px 16px rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(12px);
+}
+
+.packCoinIcon {
+  width: 22px;
+  height: 22px;
+}
+
+/* Pack Info Card */
+.packInfoCard {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 19px 16px 12px;
+  gap: 12px;
+  flex: 1;
+  width: 169px;
+  height: 223px;
+  background: #32417a;
+  border-radius: 8px;
+}
+
+.packLabel {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: -0.23px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.packDescription {
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 22px;
+  letter-spacing: -0.4px;
+  color: #ffffff;
+}
+
+/* Giveaway Entry */
+.giveawayEntry {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 43px;
+  margin-bottom: 24px;
+  box-sizing: border-box;
+  background: #1a2242;
+  border: 1px solid #2990ff;
+  border-radius: 4px;
+  align-self: center;
+}
+
+.entryLabel {
+  margin-left: 10px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: -0.23px;
+  color: #ffffff;
+}
+
+.giveawayFooter {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: -0.08px;
+  color: #ffffff;
+  align-self: center;
+  margin-top: auto;
+}

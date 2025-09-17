@@ -1,0 +1,11 @@
+.multipleRoulettes {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.rouletteWrapper {
+  opacity: 1;
+  transform: scale(1);
+}

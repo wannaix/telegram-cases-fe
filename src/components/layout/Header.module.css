@@ -1,0 +1,154 @@
+/* Header styles */
+
+.header {
+  padding: 0 16px;
+}
+
+.headerContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background: transparent;
+  padding: 12px 0 20px;
+}
+
+.leftSection {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.backButton {
+  color: white;
+  font-size: 24px;
+  line-height: 1;
+  padding: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.backButton:hover {
+  opacity: 0.8;
+}
+
+.userSection {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  cursor: pointer;
+  transition: transform 0.4s ease, opacity 0.3s ease;
+}
+
+.userSection:hover {
+  transform: translateY(-2px);
+  opacity: 0.8;
+}
+
+.userAvatar {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.userAvatarFallback {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.userName {
+  margin-left: 12px;
+  color: white;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 120px;
+}
+
+.rightSection {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 12px;
+  margin-left: auto;
+}
+
+.balanceSection {
+  display: flex;
+  align-items: center;
+}
+
+.balanceText {
+  color: white;
+  font-weight: 500;
+  font-size: 18px;
+  margin-right: 8px;
+  cursor: pointer;
+  transition: text-decoration 0.2s ease;
+}
+
+.balanceText:hover {
+  text-decoration: underline;
+}
+
+.coinIcon {
+  width: 20px;
+  height: 20px;
+}
+
+.walletSection {
+  display: flex;
+  align-items: center;
+  z-index: 10;
+  min-width: fit-content;
+  flex-shrink: 0;
+}
+
+.tonConnectButton {
+  width: fit-content;
+  position: relative;
+  z-index: 10;
+  flex-shrink: 0;
+}
+
+.tonConnectButton :global(button[data-tc-connect-button="true"]) {
+  box-sizing: border-box !important;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 14px;
+  gap: 8px;
+  background: rgba(41, 144, 255, 0.2) !important;
+  border: 1px solid #2990FF !important;
+  border-radius: 4px !important;
+  position: relative !important;
+  z-index: 10 !important;
+  min-width: fit-content !important;
+  white-space: nowrap !important;
+}
+
+.tonConnectButton :global(div[data-tc-text="true"]) {
+  width: 109px !important;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.tonConnectButton :global(svg) {
+  display: none;
+}

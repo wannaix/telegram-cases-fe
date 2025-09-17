@@ -1,0 +1,9 @@
+/* CasesGrid styles */
+
+.caseCard {
+  position: relative;
+}
+
+.backgroundStripes {
+  background: repeating-linear-gradient(135deg, rgba(255,255,255,0.02) 0px, rgba(255,255,255,0.02) 32px, transparent 32px, transparent 48px);
+}

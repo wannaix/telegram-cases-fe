@@ -1,0 +1,475 @@
+/* Container */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Battle Container */
+.battleContainer {
+  display: flex;
+  align-items: center;
+  width: 356px;
+  position: relative;
+}
+
+
+/* Battle Sides */
+.battleSide {
+  width: 166px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* Background Column с дыркой */
+.backgroundColumn {
+  width: 166px;
+  height: 262px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 8px;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Создаем фоновый оверлей с дыркой */
+.backgroundColumn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(33, 37, 83, 0.8);
+  border-radius: 8px;
+  z-index: 2;
+  
+  /* Вырезаем дырку с закругленными краями */
+  clip-path: polygon(
+    0% 0%, 
+    0% 100%, 
+    41px 100%, 
+    41px 64px,
+    43px 57px,
+    48px 53px,
+    53px 52px,
+    113px 52px,
+    118px 53px,
+    123px 57px,
+    125px 64px,
+    125px 124px,
+    123px 131px,
+    118px 135px,
+    113px 136px,
+    53px 136px,
+    48px 135px,
+    43px 131px,
+    41px 124px,
+    41px 100%, 
+    100% 100%, 
+    100% 0%
+  );
+}
+
+/* Фоновые кейсы */
+.topCases,
+.bottomCases {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+  padding: 15px 0;
+}
+
+.bgCaseSmall {
+  width: 50px;
+  height: 62px;
+  object-fit: contain;
+}
+
+/* Анимированная прокрутка под фоном */
+.spinningReel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  z-index: 1;
+  pointer-events: none;
+  
+  /* Градиент для плавного затухания кейсов внизу */
+  mask: linear-gradient(to bottom, 
+    transparent 0%, 
+    black 15%, 
+    black calc(100% - 68px - 15px), 
+    transparent calc(100% - 68px)
+  );
+  -webkit-mask: linear-gradient(to bottom, 
+    transparent 0%, 
+    black 15%, 
+    black calc(100% - 68px - 15px), 
+    transparent calc(100% - 68px)
+  );
+}
+
+.spinningContainer {
+  position: absolute;
+  top: -300px;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.spinningCase {
+  width: 60px;
+  height: 75px;
+  object-fit: contain;
+}
+
+/* Рамка окошка */
+.mainCaseFrame {
+  position: absolute;
+  top: 52px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 84px;
+  height: 84px;
+  border: 2px solid #2990FF;
+  border-radius: 12px;
+  z-index: 100;
+  pointer-events: none;
+}
+
+.mainCase {
+  width: 60px;
+  height: 75px;
+  object-fit: contain;
+  filter: drop-shadow(0px 4px 16px rgba(0, 0, 0, 0.5));
+}
+
+.caseFrameInner {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+/* Center Divider */
+.centerDivider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 262px;
+  position: relative;
+  width: 37px;
+  background-image: url('data:image/svg+xml,<svg width="37" height="148" viewBox="0 0 37 148" fill="none" xmlns="http://www.w3.org/2000/svg"><path opacity="0.5" d="M14 41H24M24 107H14" stroke="%232990FF"/><path opacity="0.3" d="M10 20H28M28 128H10" stroke="%232990FF"/><path opacity="0.2" d="M7 1H31M31 147H7" stroke="%232990FF"/></svg>');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.roundCounter {
+  font-weight: 590;
+  font-style: normal;
+  font-size: 15px;
+  line-height: 20px;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-shadow: 0px 4px 16px rgba(0, 0, 0, 0.75);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Player Cards */
+.playerCard {
+  position: absolute;
+  bottom: 4px;
+  left: 8px;
+  right: 8px;
+  width: 150px;
+  height: 68px;
+  background: rgba(41, 144, 255, 0.15);
+  border: 1px solid #2990FF;
+  backdrop-filter: blur(3px);
+  border-radius: 8px;
+  padding: 4px;
+  gap: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  box-sizing: border-box;
+  z-index: 200;
+  pointer-events: auto;
+}
+
+.playerInfo {
+  display: flex;
+  align-items: center;
+  padding: 0px;
+  gap: 8px;
+  height: 28px;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+  object-fit: cover;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.username {
+  font-weight: 590;
+  font-size: 10px;
+  line-height: 13px;
+  letter-spacing: 0.06px;
+  color: #FFFFFF;
+}
+
+.betButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6px 8px;
+  gap: 4px;
+  min-width: 42px;
+  height: 24px;
+  background: rgba(48, 209, 36, 0.15);
+  border: 1px solid #30D124;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-sizing: border-box;
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.betButton:hover {
+  background: rgba(48, 209, 36, 0.25);
+}
+
+.coinIcon {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.betButton span {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 13px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06px;
+  color: #FFFFFF;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+/* Blue accent on sides - поверх всего */
+.backgroundColumn::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 84px;
+  width: 10px;
+  height: 22px;
+  background-image: url('data:image/svg+xml,<svg width="10" height="22" viewBox="0 0 10 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.17157 8.17157L0 0L9.61651e-07 22L8.17157 13.8284C9.73367 12.2663 9.73367 9.73367 8.17157 8.17157Z" fill="%232990FF"/></svg>');
+  z-index: 150;
+}
+
+.battleSide:last-of-type .backgroundColumn::before {
+  left: auto;
+  right: 0;
+  transform: scaleX(-1);
+  z-index: 150;
+}
+
+/* Mobile */
+@media (max-width: 320px) {
+  .battleContainer {
+    width: 100%;
+    max-width: 356px;
+    gap: 8px;
+  }
+
+  .battleSide {
+    width: 140px;
+  }
+
+  .backgroundColumn {
+    width: 140px;
+    height: 220px;
+  }
+
+  .mainCaseFrame {
+    width: 70px;
+    height: 70px;
+  }
+
+  .mainCase {
+    width: 50px;
+    height: 62px;
+  }
+
+  .playerCard {
+    width: 140px;
+  }
+
+  .roundCounter {
+    font-size: 28px;
+  }
+
+  .centerDivider {
+    height: 220px;
+  }
+
+  .dividerLine {
+    height: 60px;
+  }
+}
+
+@media (max-width: 360px) {
+  .battleContainer {
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .battleSide {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .backgroundColumn,
+  .playerCard {
+    width: 100%;
+  }
+
+  .centerDivider {
+    height: auto;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .dividerLine {
+    width: 80px;
+    height: 2px;
+  }
+}
+
+/* Inventory sections */
+.inventoryContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.inventorySection {
+  width: 166px;
+  display: flex;
+  justify-content: center;
+}
+
+.inventoryGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 8px;
+  width: 166px;
+  height: auto;
+  position: relative;
+}
+
+
+.inventoryCard {
+  width: 50px;
+  height: 64px;
+  background: #212553;
+  border-radius: 8px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 4px 4px 4px;
+  box-sizing: border-box;
+}
+
+.inventoryItem {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.inventoryEmptyCard {
+  width: 50px;
+  height: 64px;
+  border-radius: 8px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.inventoryEmptyItem {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.inventoryPrice {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 2px 4px;
+  min-height: 16px;
+  justify-content: center;
+}
+
+.inventoryIcon {
+  width: 10px;
+  height: 10px;
+}
+
+.inventoryPrice span {
+  font-weight: 590;
+  font-size: 8px;
+  line-height: 10px;
+  color: #FFFFFF;
+  text-shadow: 0px 2px 8px rgba(0, 0, 0, 0.75);
+}

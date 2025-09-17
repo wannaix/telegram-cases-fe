@@ -1,0 +1,104 @@
+/* CaseCard styles */
+.caseCard {
+  width: 177px;
+  height: 236px;
+  background: #1A2242;
+  border-radius: 8px;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.caseCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(41, 144, 255, 0.3);
+}
+
+.caseCardSelected {
+  border: 2px solid #2990FF;
+  box-shadow: 0 4px 12px rgba(41, 144, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+.caseImageContainer {
+  position: absolute;
+  width: 152px;
+  height: 152px;
+  left: 13px;
+  top: 12px;
+}
+
+.caseImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.caseInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 12px;
+  gap: 6px;
+  position: absolute;
+  height: 44px;
+  left: 0;
+  right: 0;
+  bottom: 16px;
+  backdrop-filter: blur(3px);
+  border-radius: 4px;
+}
+
+.caseTitle {
+  width: 124px;
+  height: 16px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  letter-spacing: -0.08px;
+  color: #FFFFFF;
+  opacity: 0.75;
+  text-shadow: 0px 4px 16px rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(12px);
+  text-align: center;
+}
+
+.casePriceContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  gap: 8px;
+  width: 153px;
+  height: 22px;
+}
+
+.casePriceLayout {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0;
+  gap: 4px;
+  width: 44px;
+  height: 22px;
+}
+
+.coinIcon {
+  width: 23px;
+  height: 22px;
+}
+
+.casePrice {
+  width: 17px;
+  height: 22px;
+  font-style: normal;
+  font-weight: 590;
+  font-size: 17px;
+  line-height: 22px;
+  letter-spacing: -0.4px;
+  color: #FFFFFF;
+  text-shadow: 0px 4px 16px rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(12px);
+}

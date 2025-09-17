@@ -1,0 +1,442 @@
+/* HomePage styles */
+.pageContainer {
+  background: #131A34;
+}
+
+.scrollContainer {
+  -webkit-overflow-scrolling: touch;
+}
+
+.topSection {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-top: 12px;
+}
+
+/* Promo Section */
+.promoSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 12px;
+  gap: 10px;
+  width: 100%;
+  height: 80px;
+  background: linear-gradient(0deg, #212553, #212553), url(/images/giftboost-background.png);
+  background-blend-mode: color, normal;
+  background-size: cover;
+  background-position: center;
+  border-radius: 4px;
+}
+
+.promoContent {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 8px;
+  width: 100%;
+  max-width: 342px;
+  height: 44px;
+}
+
+.promoCodeButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 2px 8px 3px;
+  gap: 10px;
+  width: 100px;
+  height: 44px;
+  background: #FFD145;
+  border-radius: 6px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.promoCodeText {
+  width: 74px;
+  height: 16px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: -0.08px;
+  text-transform: uppercase;
+  color: #000000;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.giftSection {
+  flex: 1;
+  height: 44px;
+  position: relative;
+}
+
+.giftBlackRect {
+  position: absolute;
+  width: 45%;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  background: #000000;
+  border-radius: 6px;
+}
+
+.giftWhiteRect {
+  box-sizing: border-box;
+  position: absolute;
+  left: 0px;
+  right: 33%;
+  top: 0px;
+  bottom: 0px;
+  background: #FFFFFF;
+  border: 1px solid #000000;
+  border-radius: 6px;
+}
+
+.giftText {
+  position: absolute;
+  left: 13%;
+  right: 45%;
+  top: 25%;
+  bottom: 25%;
+  font-style: normal;
+  font-weight: 590;
+  font-size: 17px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  letter-spacing: -0.4px;
+  color: #0F0F0F;
+}
+
+.percentText {
+  position: absolute;
+  left: 75%;
+  right: 8%;
+  top: 25%;
+  bottom: 25%;
+  font-style: normal;
+  font-weight: 590;
+  font-size: 17px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  letter-spacing: -0.4px;
+  color: #FFFFFF;
+}
+
+/* Tab Button Styles */
+.tabButton {
+  font-weight: 590;
+  font-size: 13px;
+  letter-spacing: -0.08px;
+  min-width: max-content;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  padding: 8px 16px;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* Cases Section */
+.casesSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.casesTitle {
+  font-style: normal;
+  font-weight: 590;
+  font-size: 19px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: -0.45px;
+  color: #FFFFFF;
+}
+
+.casesGrid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 8px;
+  width: 100%;
+  justify-content: center;
+}
+
+/* No Cases Placeholder */
+.noCasesContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+}
+
+.noCasesContent {
+  text-align: center;
+  padding: 48px 24px;
+  max-width: 400px;
+}
+
+.noCasesEmoji {
+  font-size: 72px;
+  margin-bottom: 24px;
+}
+
+.noCasesTitle {
+  font-size: 24px;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 12px;
+}
+
+.noCasesDescription {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+.noCasesButton {
+  background: linear-gradient(180deg, #3B82F6 0%, #2563EB 100%);
+  color: #FFFFFF;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.noCasesButton:hover {
+  transform: translateY(-1px);
+}
+
+.noCasesButton:active {
+  transform: translateY(0);
+}
+
+/* Skeleton Loader */
+.caseSkeleton {
+  width: 175px;
+  height: 226px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.caseSkeleton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+.skeletonImageContainer {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 16px 8px;
+}
+
+.skeletonImage {
+  width: 120px;
+  height: 140px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.skeletonBottomBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 16px;
+  height: 44px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+  gap: 8px;
+}
+
+.skeletonPrice {
+  width: 40px;
+  height: 16px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.skeletonCoin {
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Result Modal */
+.resultModal {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.resultModalContent {
+  background: #212553;
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.resultModalImage {
+  width: 80px;
+  height: 80px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.resultModalTitle {
+  font-weight: 590;
+  font-size: 18px;
+  color: #FFFFFF;
+}
+
+.resultModalButton {
+  background: #2990FF;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  color: #FFFFFF;
+  font-weight: 590;
+  cursor: pointer;
+}
+
+/* Case Card */
+.caseCard {
+  width: 175px;
+  height: 226px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  cursor: pointer;
+}
+
+.caseImageContainer {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 16px 8px;
+}
+
+.caseImage {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.caseBottomBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 16px;
+  height: 44px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.06) 100%);
+  border-radius: 4px;
+}
+
+.casePrice {
+  font-style: normal;
+  font-weight: 590;
+  font-size: 17px;
+  line-height: 22px;
+  letter-spacing: -0.4px;
+  color: #FFFFFF;
+  text-shadow: 0px 4px 16px rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(12px);
+  text-align: center;
+  margin-right: 4px;
+}
+
+.caseCoinIcon {
+  width: 20px;
+  height: 20px;
+}
+
+.caseLockOverlay {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 24px;
+  height: 24px;
+}
+
+.caseLockIcon {
+  width: 100%;
+  height: 100%;
+}

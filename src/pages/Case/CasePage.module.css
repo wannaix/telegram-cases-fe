@@ -1,0 +1,633 @@
+/* CasePage styles */
+.pageContainer {
+  background: #131A34;
+}
+
+.headerContainer {
+  padding: 0 16px;
+}
+
+.loadingContainer {
+  background: #131A34;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinner {
+  width: 48px;
+  height: 48px;
+  border: 4px solid rgba(41, 144, 255, 0.2);
+  border-top: 4px solid #2990FF;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.smallSpinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid rgba(41, 144, 255, 0.2);
+  border-top: 3px solid #2990FF;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.backButton {
+  font-size: 24px;
+  line-height: 1;
+  padding: 4px;
+}
+
+.caseContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+}
+
+.topSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px 0px 0px;
+  width: 100%;
+  height: auto;
+}
+
+.contentCard {
+  width: 358px;
+  position: relative;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.caseImageContainer {
+  position: absolute;
+  width: 120px;
+  height: 149px;
+  left: calc(50% - 120px/2);
+  top: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+
+
+.caseImage {
+  width: 120px;
+  height: 149px;
+  object-fit: contain;
+  position: relative;
+  z-index: 3;
+  filter: drop-shadow(0px 7px 42px rgba(0, 0, 0, 0.75));
+}
+
+.bottomRow {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+}
+
+.caseName {
+  font-weight: 590;
+  font-size: 17px;
+  line-height: 22px;
+  color: #FFFFFF;
+  text-align: center;
+  letter-spacing: -0.4px;
+  max-width: 120px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.priceContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0;
+  gap: 8px;
+}
+
+.priceText {
+  font-weight: 590;
+  font-size: 17px;
+  line-height: 22px;
+  color: #FFFFFF;
+  letter-spacing: -0.4px;
+  text-shadow: 0px 4px 16px rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(12px);
+}
+
+.coinIcon {
+  width: 23px;
+  height: 22px;
+}
+
+.numberButtonsRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.numberButton {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 14px;
+  gap: 8px;
+  width: 42px;
+  min-width: 42px;
+  height: 42px;
+  background: rgba(41, 144, 255, 0.2);
+  border: 1px solid #2990FF;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.numberButtonActive {
+  background: #2990FF;
+  border: 1px solid rgba(41, 144, 255, 0.2);
+}
+
+.numberButtonDisabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.numberButtonText {
+  font-weight: 590;
+  font-size: 15px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: -0.23px;
+  color: #FFFFFF;
+}
+
+.openButtonsContainer {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+  max-width: 390px;
+  margin-bottom: 20px;
+}
+
+.openButton {
+  flex: 1;
+  height: 56px;
+  background: #2990FF;
+  border-radius: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.openButtonText {
+  font-weight: 590;
+  font-size: 18px;
+  color: #FFFFFF;
+}
+
+/* Not enough funds styles */
+.notEnoughFundsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+}
+
+.notEnoughFundsMessage {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 18px;
+  color: #FFFFFF;
+}
+
+.infoIcon {
+  width: 24px;
+  height: 24px;
+  background: #FFFFFF;
+  color: #000000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.notEnoughFundsText {
+  font-weight: 500;
+}
+
+.depositButton {
+  width: 100%;
+  max-width: 340px;
+  height: 56px;
+  background: #3B82F6;
+  border-radius: 16px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.depositButton:hover {
+  background: #2563EB;
+  transform: translateY(-2px);
+}
+
+.depositButtonText {
+  font-weight: 600;
+  font-size: 18px;
+  color: #FFFFFF;
+}
+
+.caseContentTitle {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.caseContentTitleText {
+  font-weight: 590;
+  font-size: 19px;
+  line-height: 24px;
+  letter-spacing: -0.45px;
+  color: #FFFFFF;
+}
+
+.casesGrid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  gap: 20px;
+  width: 100%;
+}
+
+.itemsGrid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: flex-start;
+  padding: 0px;
+  gap: 10px;
+  width: 100%;
+  justify-content: center;
+}
+
+.loadingItemsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 120px;
+}
+
+.itemCard {
+  width: 174px;
+  height: 236px;
+  background: #1A2242;
+  border-radius: 8px;
+  position: relative;
+}
+
+.itemImageContainer {
+  position: absolute;
+  width: 152px;
+  height: 152px;
+  left: 13px;
+  top: 12px;
+}
+
+.itemImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.itemBottomInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 12px;
+  gap: 6px;
+  position: absolute;
+  height: 44px;
+  left: 0px;
+  right: 0px;
+  bottom: 16px;
+  backdrop-filter: blur(3px);
+  border-radius: 4px;
+}
+
+.itemName {
+  font-size: 13px;
+  line-height: 16px;
+  letter-spacing: -0.08px;
+  color: #FFFFFF;
+  opacity: 0.75;
+  text-shadow: 0px 4px 16px rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(12px);
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 124px;
+}
+
+.itemPriceInfoContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 8px;
+  width: 153px;
+  height: 25px;
+}
+
+.itemPriceContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+}
+
+.itemSeparator {
+  font-weight: 590;
+  font-size: 17px;
+  line-height: 22px;
+  text-align: center;
+  letter-spacing: -0.4px;
+  color: #FFFFFF;
+}
+
+.itemDiceContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+}
+
+.itemDiceIcon {
+  width: 23px;
+  height: 25px;
+}
+
+.itemDiceText {
+  font-weight: 590;
+  font-size: 17px;
+  line-height: 22px;
+  text-align: center;
+  letter-spacing: -0.4px;
+  color: #FFFFFF;
+}
+
+.itemCoinIcon {
+  width: 23px;
+  height: 22px;
+}
+
+.itemPrice {
+  font-weight: 590;
+  font-size: 17px;
+  line-height: 22px;
+  letter-spacing: -0.4px;
+  color: #FFFFFF;
+  text-shadow: 0px 4px 16px rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(12px);
+}
+
+.emptyStateContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 120px;
+}
+
+.emptyStateIcon {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.emptyStateText {
+  color: #FFFFFF;
+  opacity: 0.75;
+}
+/* Disabled state for buttons */
+.openButtonDisabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Result Modal Styles */
+.resultModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.resultModalContent {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  border-radius: 12px;
+  padding: 24px;
+  max-width: 90vw;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  border: 1px solid #333;
+}
+
+.closeButton {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.closeButton:hover {
+  color: #ff6b6b;
+}
+
+.resultTitle {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.singleResult {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 300px;
+}
+
+.wonItemContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.wonItemImage {
+  width: 120px;
+  height: 120px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.wonItemName {
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+}
+
+.wonItemRarity {
+  font-size: 14px;
+  color: #ffd700;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.multipleResults {
+  min-width: 400px;
+}
+
+.resultsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.resultItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.resultItemImage {
+  width: 60px;
+  height: 60px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.resultItemName {
+  font-size: 12px;
+  color: #fff;
+  text-align: center;
+  opacity: 0.8;
+}
+
+.resultProfit {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.profit {
+  color: #4ade80;
+}
+
+.loss {
+  color: #ef4444;
+}
+
+.totalProfit {
+  text-align: center;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 24px;
+}
+
+.totalProfit span {
+  margin-left: 8px;
+  font-weight: 600;
+}
+
+.resultButtons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.resultButton {
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+  color: white;
+}
+
+.resultButton:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+}
+
+.resultButtonSecondary {
+  background: linear-gradient(135deg, #374151 0%, #4b5563 100%);
+}
+
+.resultButtonSecondary:hover {
+  box-shadow: 0 4px 12px rgba(75, 85, 99, 0.3);
+}
