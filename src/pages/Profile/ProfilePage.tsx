@@ -13,7 +13,7 @@ import styles from "./ProfilePage.module.css";
 export const ProfilePage: React.FC = () => {
   const { user } = useTelegramWebApp();
   const [tonConnectUI] = useTonConnectUI();
-  const tonAddress = tonConnectUI.account?.address;
+  const [tonAddress, setTonAddress] = useState(tonConnectUI.account?.address);
   const [depositBalance, setDepositBalance] = useState<number | null>(null);
   const { t, i18n } = useTranslation();
   const [searchParams, setSearchParams] = useSearchParams();
@@ -24,6 +24,16 @@ export const ProfilePage: React.FC = () => {
       setSearchParams({});
     }
   }, [searchParams, setSearchParams]);
+
+  useEffect(() => {
+    const unsubscribe = tonConnectUI.onStatusChange((wallet) => {
+      setTonAddress(wallet?.account?.address);
+    });
+
+    return () => {
+      unsubscribe();
+    };
+  }, [tonConnectUI]);
   const { data: inventory = [], isLoading: isInventoryLoading } = useQuery({
     queryKey: ["inventory"],
     queryFn: inventoryApi.getInventory,
